@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #506447;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #8da382;
+  --color-on-primary-container: #263920;
+  
+  --color-secondary: #625e52;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #e8e2d2;
+  --color-on-secondary-container: #686458;
+
+  --color-tertiary: #6d5b4f;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #ae988b;
+  --color-on-tertiary-container: #403127;
+
+  --color-background: #f9f9f9;
+  --color-surface: #f9f9f9;
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #444840;
+  
+  --color-outline: #74786f;
+  --color-outline-variant: #c4c8bd;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-sans;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
