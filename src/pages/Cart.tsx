@@ -48,7 +48,7 @@ export default function Cart() {
               <div className="flex-1 flex flex-col justify-between py-2">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="font-serif text-3xl text-on-surface mb-1">{item.name}</h3>
+                    <h3 className="font-serif text-xl font-medium tracking-wide text-on-surface mb-1">{item.name}</h3>
                     <p className="font-sans text-xs text-on-surface-variant uppercase tracking-widest">{item.category}</p>
                   </div>
                   <button 
@@ -75,7 +75,7 @@ export default function Cart() {
                       <Plus size={16} />
                     </button>
                   </div>
-                  <p className="font-serif text-3xl text-on-surface">{formatPrice(item.price * item.quantity)}</p>
+                  <p className="font-serif bg-gradient-to-b from-stone-900 to-stone-800 text-on-surface">{formatPrice(item.price * item.quantity)}</p>
                 </div>
               </div>
             </motion.div>
@@ -91,7 +91,7 @@ export default function Cart() {
 
         <div className="lg:col-span-4">
           <div className="bg-white p-12 rounded-3xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.05)] border border-stone-100 sticky top-32">
-            <h3 className="font-serif text-3xl text-on-surface mb-10">Order Summary</h3>
+            <h3 className="font-serif bg-gradient-to-b from-stone-900 to-stone-800 text-on-surface mb-10">Order Summary</h3>
             <div className="space-y-6 mb-10">
               <div className="flex justify-between items-center text-on-surface-variant font-sans">
                 <span>Subtotal</span>

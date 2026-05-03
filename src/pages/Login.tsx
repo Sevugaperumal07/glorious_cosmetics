@@ -24,7 +24,7 @@ export default function Login() {
         
         <div className="w-full max-w-md bg-white p-12 rounded-3xl shadow-xl border border-stone-100 z-10">
           <div className="text-center mb-12">
-            <Link to="/" className="inline-block font-serif tracking-[0.3em] uppercase text-emerald-900 mb-8 border-b border-primary/20 pb-2">Aetheria Botanical</Link>
+            <Link to="/" className="inline-block font-serif tracking-[0.3em] uppercase text-emerald-900 mb-8 border-b border-primary/20 pb-2">Glorious Cosmetics</Link>
             <h1 className="font-serif text-4xl text-primary mb-4">Welcome Back</h1>
             <p className="font-sans text-token text-stone-500 italic">Continue your journey with nature's purest essence.</p>
           </div>
@@ -89,7 +89,7 @@ export default function Login() {
   );
 }
 
-function Leaf({ className, size }: { className?: string, size?: number }) {
+function Leaf({ className, size, strokeWidth = 1 }: { className?: string, size?: number, strokeWidth?: number }) {
   return (
     <svg 
       className={className} 
@@ -98,7 +98,7 @@ function Leaf({ className, size }: { className?: string, size?: number }) {
       viewBox="0 0 24 24" 
       fill="none" 
       stroke="currentColor" 
-      strokeWidth="1" 
+      strokeWidth={strokeWidth} 
       strokeLinecap="round" 
       strokeLinejoin="round"
     >

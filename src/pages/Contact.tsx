@@ -31,7 +31,7 @@ export default function Contact() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
         <div className="lg:col-span-4 space-y-12">
           <div className="space-y-4">
-            <h3 className="font-serif text-3xl text-on-surface">Reach Out</h3>
+            <h3 className="font-serif bg-gradient-to-b from-stone-900 to-stone-800 text-on-surface">Reach Out</h3>
             <div className="space-y-4 pt-4">
               <div className="flex items-center gap-4 text-on-surface-variant">
                 <Mail size={20} className="text-primary" />
@@ -49,7 +49,7 @@ export default function Contact() {
           </div>
 
           <div className="pt-8 border-t border-outline-variant/10">
-            <h3 className="font-serif text-3xl text-on-surface mb-4">Instant Support</h3>
+            <h3 className="font-serif bg-gradient-to-b from-stone-900 to-stone-800 text-on-surface mb-4">Instant Support</h3>
             <p className="font-sans text-sm text-on-surface-variant mb-8 leading-relaxed">For immediate assistance regarding order status, our WhatsApp concierge is available Mon–Fri, 9am–5pm PST.</p>
             <Button 
               className="w-full py-5 bg-[#25D366] hover:bg-[#20bd5a] shadow-green-200"

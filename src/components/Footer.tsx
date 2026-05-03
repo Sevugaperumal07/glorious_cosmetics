@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-stone-50 border-t border-stone-200 py-16">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-8 text-center">
         <Link to="/" className="font-serif italic text-2xl text-stone-800">
-          Aetheria Botanical
+          Glorious Cosmetics
         </Link>
         
         <nav className="flex flex-wrap justify-center gap-x-12 gap-y-4">
@@ -29,7 +29,7 @@ export default function Footer() {
         
         <div className="space-y-2">
           <p className="font-serif text-xs tracking-wide text-stone-400">
-            © 2024 Aetheria Botanical. Handcrafted with intention.
+            © 2026 Glorious Cosmetics. Handcrafted with intention.
           </p>
           <p className="font-serif text-[10px] tracking-[0.2em] uppercase text-stone-300">
             Artisanal Beauty • Ethical Sourcing • Slow Living
