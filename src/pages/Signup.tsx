@@ -15,14 +15,14 @@ export default function Signup() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-stone-900/10 flex flex-col justify-end p-12">
-            <p className="text-white font-serif text-3xl italic opacity-90 max-w-sm">"Nature does not hurry, yet everything is accomplished."</p>
+            <p className="text-white font-serif bg-gradient-to-b from-stone-900 to-stone-800 italic opacity-90 max-w-sm">"Nature does not hurry, yet everything is accomplished."</p>
           </div>
         </div>
 
         {/* Signup Form */}
         <div className="flex flex-col space-y-12">
           <div className="space-y-4">
-            <Link to="/" className="inline-block font-serif tracking-[0.3em] uppercase text-emerald-900 mb-4 border-b border-primary/20 pb-2">Aetheria Botanical</Link>
+            <Link to="/" className="inline-block font-serif tracking-[0.3em] uppercase text-emerald-900 mb-4 border-b border-primary/20 pb-2">Glorious Cosmetics</Link>
             <h1 className="font-serif text-6xl text-primary tracking-tight">Join the Ritual</h1>
             <p className="font-serif text-xl italic text-on-surface-variant max-w-md">Begin your journey towards botanical purity and slow, intentional living.</p>
           </div>

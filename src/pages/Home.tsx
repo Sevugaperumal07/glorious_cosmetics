@@ -22,9 +22,11 @@ export default function Home() {
           <img 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDncyeinwTexm5UWzaPHiPqAH2hVe9-2J-U2fU7UsT564YravTn8Mn5w6kQMztOvq26U27O_MHzzLO1SEk0YNviQn9woTviTPloHSV_fbr5ix2hV6gwZsbU8jfRiXPLy9ErtBwuMIjgoV-pZl0JEOJma8z-JcleAPMow2Og9Y529TGGb-pgIy307VOf_jRRa-XAjAOor54EsI-U2XaFKkDmbNrf2E6CBZuo5xpLaMAzSoWwzA8EeQN_Ji__Ymnzwy36H8-_AGGuqEc" 
             alt="Hero" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105"
+            loading="eager"
+            fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-stone-900/30"></div>
+          <div className="absolute inset-0 bg-stone-900/40"></div>
         </div>
         
         <motion.div 
@@ -77,7 +79,7 @@ export default function Home() {
       {/* Philosophy Bento */}
       <section className="bg-surface-container-low py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-3xl text-center mb-16">The Philosophy of Slow Beauty</h2>
+          <h2 className="font-serif bg-gradient-to-b from-stone-900 to-stone-800 text-center mb-16">The Philosophy of Slow Beauty</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {bentoItems.map((item, i) => (
               <div key={i} className="bg-white p-10 rounded-2xl flex flex-col items-center text-center border border-outline-variant/10 hover:shadow-lg transition-shadow">
@@ -98,7 +100,7 @@ export default function Home() {
           <span className="font-sans text-[12px] font-semibold text-primary uppercase tracking-[0.3em] mb-6 block">
             Shared Experiences
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl mb-20 italic">"A transformation for my skin and soul."</h2>
+          <h2 className="font-serif bg-gradient-to-b from-stone-900 to-stone-800 md:text-4xl mb-20 italic">"A transformation for my skin and soul."</h2>
           
           <div className="flex overflow-x-auto gap-8 pb-8 snap-x no-scrollbar">
             {[

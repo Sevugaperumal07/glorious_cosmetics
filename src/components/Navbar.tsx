@@ -25,9 +25,12 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <button 
             onClick={() => setIsMenuOpen(true)}
-            className="text-primary hover:opacity-70 transition-opacity md:hidden"
+            className="text-primary hover:opacity-70 transition-opacity md:hidden p-2"
+            aria-label="Open navigation menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
-            <Menu size={24} />
+            <Menu size={24} aria-hidden="true" />
           </button>
           
           <nav className="hidden md:flex gap-8">
@@ -44,7 +47,7 @@ export default function Navbar() {
         </div>
 
         <Link to="/" className="text-lg font-medium tracking-[0.2em] uppercase text-emerald-900 font-serif">
-          Aetheria Botanical
+          Glorious Cosmetics
         </Link>
 
         <div className="flex items-center gap-4">
@@ -84,38 +87,74 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Backdrop */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsMenuOpen(false)}
+            className="fixed inset-0 bg-black/70 backdrop-blur-md z-[55] md:hidden"
+            aria-hidden="true"
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Mobile Side Drawer */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 bg-white z-[60] p-8 md:hidden"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed inset-y-0 left-0 w-full bg-black max-w-[300px] z-[60] p-8 md:hidden shadow-2xl flex flex-col"
+            role="dialog"
+            aria-modal="true"
+            id="mobile-menu"
+            aria-labelledby="menu-title"
           >
-            <button 
-              onClick={() => setIsMenuOpen(false)}
-              className="absolute top-6 right-6 text-primary"
-            >
-              <X size={24} />
+           <div className="flex justify-between items-center mb-8">
+          <h2 className="text-white text-lg font-semibold tracking-widest">
+             Glorious Cosmetics
+            </h2>
+
+            <button onClick={() => setIsMenuOpen(false)}>
+            <X className="text-white" />
             </button>
+            </div>
             
-            <div className="flex flex-col gap-8 mt-16">
-              {navLinks.map(link => (
-                <Link
+            <div className="flex flex-col gap-6">
+              {navLinks.map((link, i) => (
+                <motion.div
                   key={link.path}
-                  to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="font-serif text-3xl text-on-surface hover:text-primary transition-colors"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.1 }}
                 >
-                  {link.name}
-                </Link>
+                  <Link
+                    to={link.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="font-serif text-xl font-medium tracking-wide text-white hover:text-emerald-400 transition-colors flex items-center justify-between group"
+                  >
+                    <span>{link.name}</span>
+                    <span className="w-8 h-[1px] bg-emerald-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                  </Link>
+                </motion.div>
               ))}
+            </div>
+
+            <div className="mt-auto pt-12 border-t border-white/10">              
+              <p className="mt-12 text-[10px] text-stone-500 uppercase tracking-widest leading-relaxed">
+                Glorious Cosmetics <br />
+                Artisan Skincare & Rituals
+              </p>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
     </header>
   );
 }

@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-
+import React from  'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CartProvider } from './context/CartContext';
@@ -31,7 +31,7 @@ function ScrollToTop() {
 
 function PageLayout({ children }: { children: React.ReactNode }) {
   const location = useLocation();
-  const hideNavs = ['/login', '/signup'].includes(location.pathname);
+  const hideNavs = ['/login', '/signup']. includes(location.pathname);
 
   return (
     <>

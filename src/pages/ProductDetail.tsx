@@ -64,7 +64,7 @@ export default function ProductDetail() {
               <span className="text-[10px] font-bold text-outline uppercase tracking-widest">(48 Reviews)</span>
             </div>
             <h1 className="font-serif text-4xl md:text-5xl text-on-surface mb-2">{product.name}</h1>
-            <p className="text-primary font-serif text-3xl">{formatPrice(product.price)}</p>
+            <p className="text-primary font-serif bg-gradient-to-b from-stone-900 to-stone-800">{formatPrice(product.price)}</p>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -144,7 +144,7 @@ export default function ProductDetail() {
       {/* Suggested */}
       <section className="bg-surface-container-low py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-serif text-3xl text-center mb-16">You May Also Like</h2>
+          <h2 className="font-serif bg-gradient-to-b from-stone-900 to-stone-800 text-center mb-16">You May Also Like</h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {suggestedProducts.map(p => (
               <ProductCard key={p.id} product={p} />
